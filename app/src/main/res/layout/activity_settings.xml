@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="56dp"
+                    android:layout_height="66dp"
+                    android:contentDescription="S.I Tech logo"
+                    android:src="@drawable/logo_shield" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+                        style="@style/ET.Heading"
+                        android:text="Easy Tracker" />
+
+                    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+                        android:id="@+id/tv_version"
+                        style="@style/ET.Caption"
+                        android:layout_marginTop="2dp" />
+
+                    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+                        style="@style/ET.Caption"
+                        android:layout_marginTop="2dp"
+                        android:text="Offline stock management by S.I Tech. Your data stays on this phone." />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+                style="@style/ET.Label"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="24dp"
+                android:text="Currency" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_search"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/sp_currency"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@null" />
+            </LinearLayout>
+
+            <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+                style="@style/ET.Label"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="24dp"
+                android:text="Stock valuation" />
+
+            <RadioGroup
+                android:id="@+id/rg_valuation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <RadioButton
+                    android:id="@+id/rb_cost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/et_primary"
+                    android:text="Purchase price (what the stock cost you)"
+                    android:textColor="@color/et_text"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_retail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/et_primary"
+                    android:text="Selling price (what the stock would sell for)"
+                    android:textColor="@color/et_text"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+            <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+                style="@style/ET.Label"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="24dp"
+                android:text="Data" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_export"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Export inventory to CSV" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_backup"
+                style="@style/Widget.ET.Button.Outlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Back up database" />
+
+            <TextView
+                style="@style/ET.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:text="© S.I Tech · Easy Tracker v1.0" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/layout_bottom_nav" />
+</LinearLayout>

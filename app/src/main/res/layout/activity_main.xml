@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Header with logo and total stock value -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_header"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="46dp"
+                        android:layout_height="54dp"
+                        android:contentDescription="S.I Tech logo"
+                        android:src="@drawable/logo_shield" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Easy Tracker"
+                            android:textColor="@color/white"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="by S.I Tech"
+                            android:textColor="@color/et_silver"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_header_stat"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TOTAL STOCK VALUE"
+                        android:textColor="@color/et_silver"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textColor="@color/white"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_value_note"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:textColor="@color/et_silver"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Stat cards -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="16dp">
+
+                <LinearLayout
+                    android:id="@+id/card_products"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_card"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/tv_products"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/et_primary"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+                        style="@style/ET.Label"
+                        android:layout_marginTop="2dp"
+                        android:text="Products" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_card"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/tv_units"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/et_accent"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+                        style="@style/ET.Label"
+                        android:layout_marginTop="2dp"
+                        android:text="Units in stock" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingTop="12dp"
+                android:paddingEnd="16dp">
+
+                <LinearLayout
+                    android:id="@+id/card_low"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_card"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/tv_low"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/status_low"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+                        style="@style/ET.Label"
+                        android:layout_marginTop="2dp"
+                        android:text="Low stock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/card_out"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_card"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/tv_out"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/status_out"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+                        style="@style/ET.Label"
+                        android:layout_marginTop="2dp"
+                        android:text="Out of stock" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Quick actions -->
+            <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+                style="@style/ET.SectionTitle"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="22dp"
+                android:text="Quick actions" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="12dp"
+                android:paddingTop="12dp"
+                android:paddingEnd="12dp">
+
+                <LinearLayout
+                    android:id="@+id/act_add"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackground"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <ImageView
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:background="@drawable/bg_circle_primary"
+                        android:contentDescription="Add product"
+                        android:padding="15dp"
+                        android:src="@drawable/ic_add"
+                        app:tint="@color/et_primary"
+                        xmlns:app="http://schemas.android.com/apk/res-auto" />
+
+                    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+                        style="@style/ET.Caption"
+                        android:layout_marginTop="6dp"
+                        android:text="Add Product"
+                        android:textColor="@color/et_text"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/act_in"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackground"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <ImageView
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:background="@drawable/bg_circle_green"
+                        android:contentDescription="Stock in"
+                        android:padding="15dp"
+                        android:src="@drawable/ic_stock_in"
+                        app:tint="@color/status_ok"
+                        xmlns:app="http://schemas.android.com/apk/res-auto" />
+
+                    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+                        style="@style/ET.Caption"
+                        android:layout_marginTop="6dp"
+                        android:text="Stock In"
+                        android:textColor="@color/et_text"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/act_out"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackground"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <ImageView
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:background="@drawable/bg_circle_red"
+                        android:contentDescription="Stock out"
+                        android:padding="15dp"
+                        android:src="@drawable/ic_stock_out"
+                        app:tint="@color/status_out"
+                        xmlns:app="http://schemas.android.com/apk/res-auto" />
+
+                    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+                        style="@style/ET.Caption"
+                        android:layout_marginTop="6dp"
+                        android:text="Stock Out"
+                        android:textColor="@color/et_text"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/act_inventory"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackground"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <ImageView
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:background="@drawable/bg_circle_primary"
+                        android:contentDescription="View inventory"
+                        android:padding="15dp"
+                        android:src="@drawable/ic_inventory"
+                        app:tint="@color/et_primary"
+                        xmlns:app="http://schemas.android.com/apk/res-auto" />
+
+                    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+                        style="@style/ET.Caption"
+                        android:layout_marginTop="6dp"
+                        android:text="Inventory"
+                        android:textColor="@color/et_text"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Stock alerts -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <TextView
+        android:layout_height="wrap_content"
+                    style="@style/ET.SectionTitle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Stock alerts" />
+
+                <TextView
+                    android:id="@+id/tv_alerts_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp"
+                    android:text="View all"
+                    android:textColor="@color/et_primary"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/alerts_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="6dp" />
+
+            <TextView
+                android:id="@+id/tv_alerts_empty"
+                style="@style/ET.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingTop="6dp"
+                android:paddingEnd="20dp"
+                android:text="All stock levels are healthy."
+                android:textSize="13sp" />
+
+            <!-- Recent movements -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <TextView
+        android:layout_height="wrap_content"
+                    style="@style/ET.SectionTitle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Recent movements" />
+
+                <TextView
+                    android:id="@+id/tv_recent_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp"
+                    android:text="View all"
+                    android:textColor="@color/et_primary"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/recent_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="6dp" />
+
+            <TextView
+                android:id="@+id/tv_recent_empty"
+                style="@style/ET.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingTop="6dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="20dp"
+                android:text="No stock movements yet. Use Stock In or Stock Out to record one."
+                android:textSize="13sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/layout_bottom_nav" />
+</LinearLayout>

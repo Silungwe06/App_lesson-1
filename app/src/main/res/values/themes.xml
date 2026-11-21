@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.EasyTracker" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/et_primary</item>
+        <item name="colorPrimaryVariant">@color/et_primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/et_accent</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:statusBarColor">@color/et_primary_dark</item>
+        <item name="android:windowBackground">@color/et_bg</item>
+        <item name="android:textColorPrimary">@color/et_text</item>
+        <item name="android:textColorSecondary">@color/et_text_secondary</item>
+        <item name="materialButtonStyle">@style/Widget.ET.Button</item>
+    </style>
+
+    <style name="Theme.EasyTracker.Splash" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/et_primary</item>
+        <item name="colorPrimaryVariant">@color/et_primary_dark</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Widget.ET.Button" parent="Widget.MaterialComponents.Button">
+        <item name="cornerRadius">14dp</item>
+        <item name="android:minHeight">54dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.ET.Button.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="cornerRadius">14dp</item>
+        <item name="android:minHeight">54dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="strokeColor">@color/et_primary</item>
+    </style>
+
+    <style name="ET.Heading">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/et_text</item>
+    </style>
+
+    <style name="ET.Body">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/et_text</item>
+    </style>
+
+    <style name="ET.Caption">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/et_text_secondary</item>
+    </style>
+
+    <style name="ET.Label">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/et_text_secondary</item>
+    </style>
+
+    <style name="ET.SectionTitle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/et_navy</item>
+    </style>
+</resources>

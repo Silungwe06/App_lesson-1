@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- S.I Tech logo palette -->
+    <color name="et_primary">#0043A7</color>
+    <color name="et_primary_dark">#002E86</color>
+    <color name="et_navy">#00226B</color>
+    <color name="et_accent">#018DE1</color>
+    <color name="et_silver">#E3EAED</color>
+    <color name="et_silver_dark">#B8C4D0</color>
+    <color name="et_bg">#F3F6FB</color>
+    <color name="et_surface">#FFFFFF</color>
+    <color name="et_text">#0B1B3A</color>
+    <color name="et_text_secondary">#5B6B8C</color>
+    <color name="et_divider">#DCE3EE</color>
+
+    <color name="status_ok">#1E9E5A</color>
+    <color name="status_ok_bg">#E3F5EB</color>
+    <color name="status_low">#E08A00</color>
+    <color name="status_low_bg">#FFF1D6</color>
+    <color name="status_out">#D93025</color>
+    <color name="status_out_bg">#FDE7E5</color>
+
+    <color name="white">#FFFFFF</color>
+</resources>
