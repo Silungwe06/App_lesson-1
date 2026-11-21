@@ -38,23 +38,23 @@
         <item name="strokeColor">@color/et_primary</item>
     </style>
 
-    <style name="ET.Heading">
+    <style parent="" name="ET.Heading">
         <item name="android:textSize">18sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/et_text</item>
     </style>
 
-    <style name="ET.Body">
+    <style parent="" name="ET.Body">
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/et_text</item>
     </style>
 
-    <style name="ET.Caption">
+    <style parent="" name="ET.Caption">
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">@color/et_text_secondary</item>
     </style>
 
-    <style name="ET.Label">
+    <style parent="" name="ET.Label">
         <item name="android:textSize">11sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:letterSpacing">0.08</item>
@@ -62,7 +62,7 @@
         <item name="android:textColor">@color/et_text_secondary</item>
     </style>
 
-    <style name="ET.SectionTitle">
+    <style parent="" name="ET.SectionTitle">
         <item name="android:textSize">16sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/et_navy</item>
