@@ -29,7 +29,8 @@ jobs:
       - name: Report build errors
         if: failure()
         run: |
-          grep -E "error:|FAILED|What went wrong|Caused by|Could not|SDK" -A3 build.log | head -40 | while IFS= read -r l; do echo "::error::${l}"; done
+          grep -n -E "What went wrong" -A14 build.log | head -40 | while IFS= read -r l; do echo "::error::${l}"; done
+          grep -n -E "AAPT|aapt|error:|resource .* not found|attribute .* not found" build.log | head -20 | while IFS= read -r l; do echo "::error::${l}"; done
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
