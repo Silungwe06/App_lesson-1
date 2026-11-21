@@ -19,9 +19,17 @@ jobs:
       - uses: gradle/actions/setup-gradle@v3
         with:
           gradle-version: '8.2'
+          cache-disabled: true
 
       - name: Build debug APK
-        run: gradle assembleDebug --no-daemon
+        run: |
+          set -o pipefail
+          gradle assembleDebug --no-daemon --console=plain --stacktrace 2>&1 | tee build.log
+
+      - name: Report build errors
+        if: failure()
+        run: |
+          grep -E "error:|FAILED|What went wrong|Caused by|Could not|SDK" -A3 build.log | head -40 | while IFS= read -r l; do echo "::error::${l}"; done
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
